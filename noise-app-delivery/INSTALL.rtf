@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1.Watch Setup\
+\
+One Time Watch Set Up:\
+\
+Avoid pairing a phone if possible\
+\
+Enable Developer Mode:\
+Settings -> System -> About -> tap build number until you enter developer mode ~10 times\
+\
+Connect To Wifi:\
+Settings -> Connectivity -> Wifi -> Add Network\
+\
+\
+Every time You Upload:\
+\
+Settings -> Developer Options -> Adb Debugging On\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Settings -> Developer Options -> Debug over Wifi On (wait for ip address)\
+\
+2. Adb Setup\
+\
+One time install:\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf0 Install android command line tools:\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://developer.android.com/studio#command-tools"}}{\fldrslt 
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 https://developer.android.com/studio#command-tools}}
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone \outl0\strokewidth0 3. Connect and upload\
+From command line type:\
+\
+adb connect <ip address from debug over wifi>\
+You may need to accept this on the watch, it may also say it fails but really didn\'92t so just run it again until it says already connected.\
+\
+Next install the application on the watch\
+adb install <path to specific apk file>\
+\
+That\'92s basically it, the watch might ask you to accept things, accept them.\
+\
+Between each watch upload its easiest to kill the server and restart it then handle multiple devices in your cache.\
+\
+adb kill-server\
+adb start-server\
+\
+it might give you some trouble, I\'92m not sure if patience helps but if you wait too long just try starting the server till it says running. At worst you can restart your computer, this is the simplest method of handling this issue.\
+}
